@@ -1,1 +1,769 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>elveo · logo review</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="elveo · logo + motif review · 3 palettes × 5 motifs × light/dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Exo+2:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-25 -22 50 36'><rect x='-18' y='-3.5' width='12' height='7' fill='%2314b8a6'/><rect x='6' y='-3.5' width='12' height='7' fill='%2314b8a6'/><rect x='-5.5' y='-5.5' width='11' height='11' fill='%2314b8a6'/><line x1='0' y1='-5.5' x2='0' y2='-13' stroke='%2314b8a6' stroke-width='1.5'/><circle cx='0' cy='-15' r='2' fill='%2314b8a6'/></svg>" />
+
+<style>
+  :root {
+    --warm: #f5f1ea;
+    --paper: #ffffff;
+    --line: rgba(20,20,30,0.10);
+    --ink-doc: #1a1a1a;
+    --meta: rgba(20,20,30,0.55);
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--warm); }
+  body {
+    color: var(--ink-doc);
+    font-family: 'Exo 2', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+
+  .doc { max-width: 1280px; margin: 0 auto; padding: 72px 48px 120px; }
+
+  /* ---- header ---- */
+  .meta-row {
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--meta);
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 56px;
+  }
+  h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    font-size: 56px;
+    letter-spacing: -0.03em;
+    margin: 0 0 8px;
+  }
+  .subhead {
+    font-family: var(--mono);
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--meta);
+    margin: 0 0 56px;
+  }
+
+  /* ---- palette section ---- */
+  .palette-section {
+    margin-bottom: 80px;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .pal-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 28px 36px 24px;
+    border-bottom: 1px solid var(--line);
+    background: var(--warm);
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  .pal-head .title {
+    display: flex; align-items: baseline; gap: 14px;
+  }
+  .pal-head .title .num {
+    font-family: var(--mono);
+    font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--meta);
+  }
+  .pal-head .title h2 {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    letter-spacing: -0.02em;
+  }
+  .pal-head .swatches { display: flex; gap: 12px; }
+  .pal-head .sw {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--meta);
+  }
+  .pal-head .sw .chip {
+    width: 22px; height: 22px; border-radius: 5px;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08);
+  }
+  .pal-head .sw b {
+    color: var(--ink-doc);
+    font-weight: 700;
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
+  .pal-head .sw .stack { line-height: 1.4; }
+
+  /* ---- motif grid (5 rows × 2 cols) ---- */
+  .motif-row {
+    display: grid;
+    grid-template-columns: 220px 1fr 1fr;
+    border-top: 1px solid var(--line);
+  }
+  .motif-row:first-of-type { border-top: 0; }
+  .motif-label {
+    padding: 24px 28px;
+    display: flex; flex-direction: column; justify-content: center; gap: 6px;
+    background: var(--warm);
+    border-right: 1px solid var(--line);
+  }
+  .motif-label .num {
+    font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--meta);
+  }
+  .motif-label .name {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+  }
+  .motif-label .desc {
+    font-size: 12px;
+    color: var(--meta);
+    margin-top: 4px;
+  }
+  .motif-cell {
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 32px;
+    border-left: 1px solid var(--line);
+  }
+  .motif-cell:first-of-type { border-left: 0; }
+  .motif-cell .badge {
+    position: absolute; bottom: 12px; left: 16px;
+    font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+    opacity: 0.55;
+  }
+
+  /* ---- wordmark ---- */
+  .wm {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    line-height: 1;
+    display: inline-block;
+  }
+  .wm.lato { font-family: 'Lato', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+  .wm.mont { font-family: 'Montserrat', sans-serif; font-weight: 500; letter-spacing: -0.025em; }
+
+  .logo-box {
+    position: relative;
+    display: inline-block;
+    padding: 22px 8px;
+  }
+  .logo-box .wm { position: relative; z-index: 2; }
+
+  /* motif positioning base (matches canvas defaults) */
+  .motif-art {
+    position: absolute; pointer-events: none;
+  }
+
+  /* notes box */
+  .notes {
+    margin-top: 56px;
+    padding: 32px;
+    border-radius: 14px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+  }
+  .notes h3 {
+    font-family: var(--mono);
+    font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--meta); font-weight: 500;
+    margin: 0 0 16px;
+  }
+  .notes ul { margin: 0; padding-left: 18px; }
+  .notes li { margin-bottom: 8px; font-size: 14px; line-height: 1.55; }
+  .notes li b { color: var(--ink-doc); }
+
+  /* footer */
+  footer {
+    margin-top: 72px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; align-items: baseline;
+    font-family: var(--mono);
+    font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--meta);
+    flex-wrap: wrap; gap: 16px;
+  }
+  footer a { color: var(--meta); text-decoration: none; }
+  footer a:hover { color: var(--ink-doc); }
+
+  /* responsive */
+  @media (max-width: 900px) {
+    .doc { padding: 48px 24px 80px; }
+    h1 { font-size: 36px; }
+    .motif-row { grid-template-columns: 1fr; }
+    .motif-label { border-right: 0; border-bottom: 1px solid var(--line); }
+    .motif-cell { border-left: 0; border-top: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+
+<div class="doc">
+
+  <div class="meta-row">
+    <div>elveo · logo review</div>
+    <div>v3 · 3 palettes × 5 motifs × light/dark</div>
+  </div>
+
+  <h1>elveo logo review</h1>
+  <div class="subhead">3 palettes &middot; 5 motifs &middot; light + dark &middot; for share</div>
+
+  <div class="notes" style="margin-top:0; margin-bottom:56px">
+    <h3>Notes for reviewers</h3>
+    <ul>
+      <li><b>Three palettes</b> — Crimson (#ef233c · Lato), Pine teal (#14b8a6 · Exo 2), Royal purple (#8b5cf6 · Montserrat). Same vivid ink on both light and dark surfaces.</li>
+      <li><b>Five motifs</b> per palette — wordmark + satellite (recommended), trajectory, crosshair, constellation, orbital nodes.</li>
+      <li><b>The 'o' is just a letter</b> — typed by the font, not a separate orb. The brand identity comes from the wordmark + satellite icon.</li>
+      <li>Reply with your preferred palette + motif combo to lock the master.</li>
+    </ul>
+  </div>
+
+</div>
+
+<!--
+  ==========================================================================
+  RENDER LOGOS — vanilla HTML/SVG. Each palette section has 5 motif rows.
+  ==========================================================================
+-->
+
+<!-- Reusable satellite SVG path group, used by every motif via <symbol>. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="sat" viewBox="-22 -16 44 32" overflow="visible">
+    <rect x="-18" y="-3.5" width="12" height="7" fill="currentColor"/>
+    <rect x="6"   y="-3.5" width="12" height="7" fill="currentColor"/>
+    <line x1="-14" y1="-3.5" x2="-14" y2="3.5" stroke="var(--divider)" stroke-width="0.5"/>
+    <line x1="-10" y1="-3.5" x2="-10" y2="3.5" stroke="var(--divider)" stroke-width="0.5"/>
+    <line x1="10"  y1="-3.5" x2="10"  y2="3.5" stroke="var(--divider)" stroke-width="0.5"/>
+    <line x1="14"  y1="-3.5" x2="14"  y2="3.5" stroke="var(--divider)" stroke-width="0.5"/>
+    <rect x="-5.5" y="-5.5" width="11" height="11" fill="currentColor"/>
+    <line x1="0" y1="-5.5" x2="0" y2="-13" stroke="currentColor" stroke-width="1" stroke-linecap="round"/>
+    <circle cx="0" cy="-15" r="1.75" fill="currentColor"/>
+  </symbol>
+</svg>
+
+
+<div class="doc" style="padding-top:0">
+
+  <!-- ============== CRIMSON ============== -->
+  <section class="palette-section" style="--ink:#ef233c; --deep:#1a0207;">
+    <div class="pal-head">
+      <div class="title">
+        <span class="num">01</span>
+        <h2 style="color:#ef233c">Crimson · Lato</h2>
+      </div>
+      <div class="swatches">
+        <div class="sw"><span class="chip" style="background:#ef233c"></span><div class="stack"><b>BRAND</b>#ef233c</div></div>
+        <div class="sw"><span class="chip" style="background:#1a0207"></span><div class="stack"><b>DARK</b>#1a0207</div></div>
+      </div>
+    </div>
+
+    <!-- FEATURED -->
+    <div class="motif-row">
+      <div class="motif-label">
+        <span class="num">FEATURED</span>
+        <span class="name">Wordmark + satellite</span>
+        <span class="desc">Satellite at top-right. Cleanest read.</span>
+      </div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+          <svg style="position:absolute; right:-2%; top:-26%; width:72px; height:48px; color:#ef233c; overflow:visible" viewBox="-25 -16 50 32"><use href="#sat" transform="scale(1.15)"/></svg>
+        </span>
+        <span class="badge" style="color:#ef233c">light</span>
+      </div>
+      <div class="motif-cell" style="background:#1a0207; --divider:#1a0207">
+        <span class="logo-box">
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+          <svg style="position:absolute; right:-2%; top:-26%; width:72px; height:48px; color:#ef233c; overflow:visible" viewBox="-25 -16 50 32"><use href="#sat" transform="scale(1.15)"/></svg>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <!-- TRAJECTORY -->
+    <div class="motif-row">
+      <div class="motif-label">
+        <span class="num">02</span>
+        <span class="name">Trajectory</span>
+        <span class="desc">Rising dashed arc · satellite at apex.</span>
+      </div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-14% -6% auto; height:36%; overflow:visible; color:#ef233c" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 10 90 Q 200 -40 390 30" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 7" stroke-linecap="round"/>
+            <use href="#sat" transform="translate(390 30) scale(0.65)"/>
+          </svg>
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+        </span>
+        <span class="badge" style="color:#ef233c">light</span>
+      </div>
+      <div class="motif-cell" style="background:#1a0207; --divider:#1a0207">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-14% -6% auto; height:36%; overflow:visible; color:#ef233c" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 10 90 Q 200 -40 390 30" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 7" stroke-linecap="round"/>
+            <use href="#sat" transform="translate(390 30) scale(0.65)"/>
+          </svg>
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <!-- CROSSHAIR -->
+    <div class="motif-row">
+      <div class="motif-label">
+        <span class="num">03</span>
+        <span class="name">Crosshair</span>
+        <span class="desc">Tracking reticle · satellite at center.</span>
+      </div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-2%; top:18%; width:18%; height:66%; overflow:visible; color:#ef233c" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="0" y1="50" x2="12" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="88" y1="50" x2="100" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="0" x2="50" y2="12" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="88" x2="50" y2="100" stroke="currentColor" stroke-width="2"/>
+            <use href="#sat" transform="translate(50 50) scale(0.7)"/>
+          </svg>
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+        </span>
+        <span class="badge" style="color:#ef233c">light</span>
+      </div>
+      <div class="motif-cell" style="background:#1a0207; --divider:#1a0207">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-2%; top:18%; width:18%; height:66%; overflow:visible; color:#ef233c" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="0" y1="50" x2="12" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="88" y1="50" x2="100" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="0" x2="50" y2="12" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="88" x2="50" y2="100" stroke="currentColor" stroke-width="2"/>
+            <use href="#sat" transform="translate(50 50) scale(0.7)"/>
+          </svg>
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <!-- CONSTELLATION -->
+    <div class="motif-row">
+      <div class="motif-label">
+        <span class="num">04</span>
+        <span class="name">Constellation</span>
+        <span class="desc">Star field above · anchor satellite.</span>
+      </div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-30% -10% 50%; overflow:visible; color:#ef233c" viewBox="0 0 400 80">
+            <line x1="30" y1="50" x2="110" y2="20" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="110" y1="20" x2="190" y2="55" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="190" y1="55" x2="270" y2="25" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="270" y1="25" x2="370" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <circle cx="30" cy="50" r="3" fill="currentColor"/>
+            <circle cx="190" cy="55" r="3" fill="currentColor"/>
+            <circle cx="270" cy="25" r="3" fill="currentColor"/>
+            <circle cx="370" cy="50" r="3" fill="currentColor"/>
+            <use href="#sat" transform="translate(110 20) scale(0.55)"/>
+          </svg>
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+        </span>
+        <span class="badge" style="color:#ef233c">light</span>
+      </div>
+      <div class="motif-cell" style="background:#1a0207; --divider:#1a0207">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-30% -10% 50%; overflow:visible; color:#ef233c" viewBox="0 0 400 80">
+            <line x1="30" y1="50" x2="110" y2="20" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="110" y1="20" x2="190" y2="55" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="190" y1="55" x2="270" y2="25" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="270" y1="25" x2="370" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <circle cx="30" cy="50" r="3" fill="currentColor"/>
+            <circle cx="190" cy="55" r="3" fill="currentColor"/>
+            <circle cx="270" cy="25" r="3" fill="currentColor"/>
+            <circle cx="370" cy="50" r="3" fill="currentColor"/>
+            <use href="#sat" transform="translate(110 20) scale(0.55)"/>
+          </svg>
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <!-- ORBITAL NODES -->
+    <div class="motif-row">
+      <div class="motif-label">
+        <span class="num">05</span>
+        <span class="name">Orbital nodes</span>
+        <span class="desc">Curved path · apex satellite.</span>
+      </div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-4%; right:-4%; top:-22%; height:30%; overflow:visible; color:#ef233c" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 0 80 Q 200 -20 400 80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <circle cx="60" cy="50" r="5" fill="currentColor"/>
+            <circle cx="340" cy="50" r="5" fill="currentColor"/>
+            <use href="#sat" transform="translate(200 18) scale(0.7)"/>
+          </svg>
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+        </span>
+        <span class="badge" style="color:#ef233c">light</span>
+      </div>
+      <div class="motif-cell" style="background:#1a0207; --divider:#1a0207">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-4%; right:-4%; top:-22%; height:30%; overflow:visible; color:#ef233c" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 0 80 Q 200 -20 400 80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <circle cx="60" cy="50" r="5" fill="currentColor"/>
+            <circle cx="340" cy="50" r="5" fill="currentColor"/>
+            <use href="#sat" transform="translate(200 18) scale(0.7)"/>
+          </svg>
+          <span class="wm lato" style="font-size:96px; color:#ef233c">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============== PINE TEAL ============== -->
+  <section class="palette-section" style="--ink:#14b8a6; --deep:#042022;">
+    <div class="pal-head">
+      <div class="title">
+        <span class="num">02</span>
+        <h2 style="color:#14b8a6">Pine teal · Exo 2</h2>
+      </div>
+      <div class="swatches">
+        <div class="sw"><span class="chip" style="background:#14b8a6"></span><div class="stack"><b>BRAND</b>#14b8a6</div></div>
+        <div class="sw"><span class="chip" style="background:#042022"></span><div class="stack"><b>DARK</b>#042022</div></div>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">FEATURED</span><span class="name">Wordmark + satellite</span><span class="desc">Satellite at top-right.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+          <svg style="position:absolute; right:-2%; top:-26%; width:72px; height:48px; color:#14b8a6; overflow:visible" viewBox="-25 -16 50 32"><use href="#sat" transform="scale(1.15)"/></svg>
+        </span>
+        <span class="badge" style="color:#14b8a6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#042022; --divider:#042022">
+        <span class="logo-box">
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+          <svg style="position:absolute; right:-2%; top:-26%; width:72px; height:48px; color:#14b8a6; overflow:visible" viewBox="-25 -16 50 32"><use href="#sat" transform="scale(1.15)"/></svg>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">02</span><span class="name">Trajectory</span><span class="desc">Rising dashed arc · satellite at apex.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-14% -6% auto; height:36%; overflow:visible; color:#14b8a6" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 10 90 Q 200 -40 390 30" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 7" stroke-linecap="round"/>
+            <use href="#sat" transform="translate(390 30) scale(0.65)"/>
+          </svg>
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+        </span>
+        <span class="badge" style="color:#14b8a6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#042022; --divider:#042022">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-14% -6% auto; height:36%; overflow:visible; color:#14b8a6" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 10 90 Q 200 -40 390 30" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 7" stroke-linecap="round"/>
+            <use href="#sat" transform="translate(390 30) scale(0.65)"/>
+          </svg>
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">03</span><span class="name">Crosshair</span><span class="desc">Tracking reticle · satellite at center.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-2%; top:18%; width:18%; height:66%; overflow:visible; color:#14b8a6" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="0" y1="50" x2="12" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="88" y1="50" x2="100" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="0" x2="50" y2="12" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="88" x2="50" y2="100" stroke="currentColor" stroke-width="2"/>
+            <use href="#sat" transform="translate(50 50) scale(0.7)"/>
+          </svg>
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+        </span>
+        <span class="badge" style="color:#14b8a6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#042022; --divider:#042022">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-2%; top:18%; width:18%; height:66%; overflow:visible; color:#14b8a6" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="0" y1="50" x2="12" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="88" y1="50" x2="100" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="0" x2="50" y2="12" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="88" x2="50" y2="100" stroke="currentColor" stroke-width="2"/>
+            <use href="#sat" transform="translate(50 50) scale(0.7)"/>
+          </svg>
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">04</span><span class="name">Constellation</span><span class="desc">Star field above · anchor satellite.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-30% -10% 50%; overflow:visible; color:#14b8a6" viewBox="0 0 400 80">
+            <line x1="30" y1="50" x2="110" y2="20" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="110" y1="20" x2="190" y2="55" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="190" y1="55" x2="270" y2="25" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="270" y1="25" x2="370" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <circle cx="30" cy="50" r="3" fill="currentColor"/>
+            <circle cx="190" cy="55" r="3" fill="currentColor"/>
+            <circle cx="270" cy="25" r="3" fill="currentColor"/>
+            <circle cx="370" cy="50" r="3" fill="currentColor"/>
+            <use href="#sat" transform="translate(110 20) scale(0.55)"/>
+          </svg>
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+        </span>
+        <span class="badge" style="color:#14b8a6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#042022; --divider:#042022">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-30% -10% 50%; overflow:visible; color:#14b8a6" viewBox="0 0 400 80">
+            <line x1="30" y1="50" x2="110" y2="20" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="110" y1="20" x2="190" y2="55" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="190" y1="55" x2="270" y2="25" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="270" y1="25" x2="370" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <circle cx="30" cy="50" r="3" fill="currentColor"/>
+            <circle cx="190" cy="55" r="3" fill="currentColor"/>
+            <circle cx="270" cy="25" r="3" fill="currentColor"/>
+            <circle cx="370" cy="50" r="3" fill="currentColor"/>
+            <use href="#sat" transform="translate(110 20) scale(0.55)"/>
+          </svg>
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">05</span><span class="name">Orbital nodes</span><span class="desc">Curved path · apex satellite.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-4%; right:-4%; top:-22%; height:30%; overflow:visible; color:#14b8a6" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 0 80 Q 200 -20 400 80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <circle cx="60" cy="50" r="5" fill="currentColor"/>
+            <circle cx="340" cy="50" r="5" fill="currentColor"/>
+            <use href="#sat" transform="translate(200 18) scale(0.7)"/>
+          </svg>
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+        </span>
+        <span class="badge" style="color:#14b8a6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#042022; --divider:#042022">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-4%; right:-4%; top:-22%; height:30%; overflow:visible; color:#14b8a6" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 0 80 Q 200 -20 400 80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <circle cx="60" cy="50" r="5" fill="currentColor"/>
+            <circle cx="340" cy="50" r="5" fill="currentColor"/>
+            <use href="#sat" transform="translate(200 18) scale(0.7)"/>
+          </svg>
+          <span class="wm" style="font-size:96px; color:#14b8a6">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============== ROYAL PURPLE ============== -->
+  <section class="palette-section" style="--ink:#8b5cf6; --deep:#15102e;">
+    <div class="pal-head">
+      <div class="title">
+        <span class="num">03</span>
+        <h2 style="color:#8b5cf6">Royal purple · Montserrat</h2>
+      </div>
+      <div class="swatches">
+        <div class="sw"><span class="chip" style="background:#8b5cf6"></span><div class="stack"><b>BRAND</b>#8b5cf6</div></div>
+        <div class="sw"><span class="chip" style="background:#15102e"></span><div class="stack"><b>DARK</b>#15102e</div></div>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">FEATURED</span><span class="name">Wordmark + satellite</span><span class="desc">Satellite at top-right.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+          <svg style="position:absolute; right:-2%; top:-26%; width:72px; height:48px; color:#8b5cf6; overflow:visible" viewBox="-25 -16 50 32"><use href="#sat" transform="scale(1.15)"/></svg>
+        </span>
+        <span class="badge" style="color:#8b5cf6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#15102e; --divider:#15102e">
+        <span class="logo-box">
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+          <svg style="position:absolute; right:-2%; top:-26%; width:72px; height:48px; color:#8b5cf6; overflow:visible" viewBox="-25 -16 50 32"><use href="#sat" transform="scale(1.15)"/></svg>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">02</span><span class="name">Trajectory</span><span class="desc">Rising dashed arc · satellite at apex.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-14% -6% auto; height:36%; overflow:visible; color:#8b5cf6" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 10 90 Q 200 -40 390 30" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 7" stroke-linecap="round"/>
+            <use href="#sat" transform="translate(390 30) scale(0.65)"/>
+          </svg>
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+        </span>
+        <span class="badge" style="color:#8b5cf6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#15102e; --divider:#15102e">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-14% -6% auto; height:36%; overflow:visible; color:#8b5cf6" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 10 90 Q 200 -40 390 30" fill="none" stroke="currentColor" stroke-width="3" stroke-dasharray="3 7" stroke-linecap="round"/>
+            <use href="#sat" transform="translate(390 30) scale(0.65)"/>
+          </svg>
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">03</span><span class="name">Crosshair</span><span class="desc">Tracking reticle · satellite at center.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-2%; top:18%; width:18%; height:66%; overflow:visible; color:#8b5cf6" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="0" y1="50" x2="12" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="88" y1="50" x2="100" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="0" x2="50" y2="12" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="88" x2="50" y2="100" stroke="currentColor" stroke-width="2"/>
+            <use href="#sat" transform="translate(50 50) scale(0.7)"/>
+          </svg>
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+        </span>
+        <span class="badge" style="color:#8b5cf6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#15102e; --divider:#15102e">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-2%; top:18%; width:18%; height:66%; overflow:visible; color:#8b5cf6" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="44" fill="none" stroke="currentColor" stroke-width="2"/>
+            <line x1="0" y1="50" x2="12" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="88" y1="50" x2="100" y2="50" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="0" x2="50" y2="12" stroke="currentColor" stroke-width="2"/>
+            <line x1="50" y1="88" x2="50" y2="100" stroke="currentColor" stroke-width="2"/>
+            <use href="#sat" transform="translate(50 50) scale(0.7)"/>
+          </svg>
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">04</span><span class="name">Constellation</span><span class="desc">Star field above · anchor satellite.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-30% -10% 50%; overflow:visible; color:#8b5cf6" viewBox="0 0 400 80">
+            <line x1="30" y1="50" x2="110" y2="20" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="110" y1="20" x2="190" y2="55" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="190" y1="55" x2="270" y2="25" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="270" y1="25" x2="370" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <circle cx="30" cy="50" r="3" fill="currentColor"/>
+            <circle cx="190" cy="55" r="3" fill="currentColor"/>
+            <circle cx="270" cy="25" r="3" fill="currentColor"/>
+            <circle cx="370" cy="50" r="3" fill="currentColor"/>
+            <use href="#sat" transform="translate(110 20) scale(0.55)"/>
+          </svg>
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+        </span>
+        <span class="badge" style="color:#8b5cf6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#15102e; --divider:#15102e">
+        <span class="logo-box">
+          <svg style="position:absolute; inset:-30% -10% 50%; overflow:visible; color:#8b5cf6" viewBox="0 0 400 80">
+            <line x1="30" y1="50" x2="110" y2="20" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="110" y1="20" x2="190" y2="55" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="190" y1="55" x2="270" y2="25" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <line x1="270" y1="25" x2="370" y2="50" stroke="currentColor" stroke-width="1" opacity="0.5"/>
+            <circle cx="30" cy="50" r="3" fill="currentColor"/>
+            <circle cx="190" cy="55" r="3" fill="currentColor"/>
+            <circle cx="270" cy="25" r="3" fill="currentColor"/>
+            <circle cx="370" cy="50" r="3" fill="currentColor"/>
+            <use href="#sat" transform="translate(110 20) scale(0.55)"/>
+          </svg>
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+
+    <div class="motif-row">
+      <div class="motif-label"><span class="num">05</span><span class="name">Orbital nodes</span><span class="desc">Curved path · apex satellite.</span></div>
+      <div class="motif-cell" style="background:#ffffff; --divider:#ffffff">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-4%; right:-4%; top:-22%; height:30%; overflow:visible; color:#8b5cf6" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 0 80 Q 200 -20 400 80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <circle cx="60" cy="50" r="5" fill="currentColor"/>
+            <circle cx="340" cy="50" r="5" fill="currentColor"/>
+            <use href="#sat" transform="translate(200 18) scale(0.7)"/>
+          </svg>
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+        </span>
+        <span class="badge" style="color:#8b5cf6">light</span>
+      </div>
+      <div class="motif-cell" style="background:#15102e; --divider:#15102e">
+        <span class="logo-box">
+          <svg style="position:absolute; left:-4%; right:-4%; top:-22%; height:30%; overflow:visible; color:#8b5cf6" viewBox="0 0 400 100" preserveAspectRatio="none">
+            <path d="M 0 80 Q 200 -20 400 80" fill="none" stroke="currentColor" stroke-width="2" opacity="0.5"/>
+            <circle cx="60" cy="50" r="5" fill="currentColor"/>
+            <circle cx="340" cy="50" r="5" fill="currentColor"/>
+            <use href="#sat" transform="translate(200 18) scale(0.7)"/>
+          </svg>
+          <span class="wm mont" style="font-size:96px; color:#8b5cf6">elveo</span>
+        </span>
+        <span class="badge" style="color:#ffffff">dark</span>
+      </div>
+    </div>
+  </section>
+
+
+  <footer>
+    <div>elveo · logo review · v3 · May 2026</div>
+    <div>3 palettes &middot; 5 motifs &middot; 2 modes</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
 
